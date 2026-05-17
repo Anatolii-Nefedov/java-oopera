@@ -18,9 +18,7 @@ public class Actor extends Person{
 
     @Override
     public String toString() {
-        return   getName() + " " +
-                 getSurname() +
-                 "(" + height + "см.)";
+        return   super.toString() + "(" + height + "см.)";
     }
 
     @Override
@@ -33,7 +31,11 @@ public class Actor extends Person{
 
         return this.getName().equals(other.getName()) &&
                 this.getSurname().equals(other.getSurname()) &&
-                this.height == other.height;
+                Double.compare(height, other.height) == 0;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getSurname(), height);
     }
 }
 

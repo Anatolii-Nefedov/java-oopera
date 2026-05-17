@@ -46,7 +46,7 @@ public class Theatre {
         opera.replaceActor("Форд", newActor);
         System.out.println();
 
-        System.out.println("Опера: " + opera.getLibrettoText());
-        System.out.println("Балет: " + ballet.getLibrettoText());
+        opera.printLibrettoText();
+        ballet.printLibrettoText();
     }
 }
